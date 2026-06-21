@@ -83,15 +83,21 @@ public class Loginpage extends ExtentReportManager {
 		{
 			
 			path = sh.takeScreenshot(open.getDriver(), result.getTestName());
+			if(path !=null)
+			{
 			test.pass(com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+			}
 		} 
 		else if (result.getStatus() == ITestResult.FAILURE)
 		{
 			
 			path = sh.takeScreenshot(open.getDriver(), result.getTestName());
+			 if(path!=null) {
 			test.fail(com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+			 }
 			
 		}
+		 System.out.print(path);
 		open.closebrowser();
     }
     

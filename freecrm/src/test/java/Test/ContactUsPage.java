@@ -64,14 +64,22 @@ public class ContactUsPage extends ExtentReportManager {
 		    {	
 			   test.info("Create new contact");
 		 	 path = sh.takeScreenshot(ob.getDriver(), result.getTestName());
+		 	 if(path!=null)
+		 	 {
 			 test.pass(com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+		 	 }
 		    } 
 	       else if (result.getStatus() == ITestResult.FAILURE)
 		    {
 	    	   test.info("Create new contact");
-    		 path = sh.takeScreenshot(ob.getDriver(), result.getTestName());			
+    		 path = sh.takeScreenshot(ob.getDriver(), result.getTestName());
+    		 if(path!=null)
+    		 {
 			 test.fail(com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+    		 }
+    		
 		     }
+		   System.out.print(path);
 		ob.closebrowser();
 
      }
