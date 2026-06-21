@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FreeCRM Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="FreeCRM Tests(failed)">
+    <classes>
+      <class name="Test.Loginpage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeReport"/>
+          <include name="flushReport"/>
+          <include name="homepagenavigation"/>
+        </methods>
+      </class> <!-- Test.Loginpage -->
+      <class name="Test.ContactUsPage">
+        <methods>
+          <include name="contactuspage"/>
+          <include name="tearDown1"/>
+          <include name="initializeReport"/>
+          <include name="openurl"/>
+          <include name="flushReport"/>
+        </methods>
+      </class> <!-- Test.ContactUsPage -->
+    </classes>
+  </test> <!-- FreeCRM Tests(failed) -->
+</suite> <!-- Failed suite [FreeCRM Suite] -->
