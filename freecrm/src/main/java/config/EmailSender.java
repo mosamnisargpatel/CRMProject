@@ -55,7 +55,7 @@ public class EmailSender {
     //set attachment
     
     MimeBodyPart attachmentPart = new MimeBodyPart();
-    String filePath = System.getProperty("user.dir") + File.separator + "target" + File.separator + "ExtentReport.html"; 
+    String filePath = System.getProperty("user.dir")  + File.separator + "ExtentReport.html"; 
    // String filePath = "C:\\Users\\mosam\\eclipse-workspace\\freecrm\\target\\ExtentReport.html";
     System.out.println("File is attached");
     attachmentPart.attachFile(new File(filePath));

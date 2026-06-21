@@ -25,7 +25,7 @@ public class ExtentReportManager extends EmailSender {
     public void initializeReport() {
         if (extent == null) {
             extent = new ExtentReports();
-            String reportPath = System.getProperty("user.dir") + File.separator + "target" + File.separator + "ExtentReport.html"; ;
+            String reportPath = System.getProperty("user.dir") + File.separator + "ExtentReport.html"; ;
             ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
             extent.attachReporter(spark);
         }
